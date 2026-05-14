@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bowxnte6oq6k4"]
+
+[ext_resource type="Script" uid="uid://cwj2g1na6leql" path="res://classes/paint.gd" id="1_vlmpn"]
+
+[node name="paint" type="ColorRect" unique_id=1341110242]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vlmpn")

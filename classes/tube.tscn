@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b0casf6cq012i"]
+
+[ext_resource type="Texture2D" uid="uid://by1lsjqn3hb33" path="res://icon.svg" id="1_jbvsc"]
+[ext_resource type="Script" uid="uid://ds7njicpmps5l" path="res://classes/tube.gd" id="2_byy63"]
+
+[node name="tube" type="TextureButton" unique_id=706047191]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_jbvsc")
+script = ExtResource("2_byy63")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
