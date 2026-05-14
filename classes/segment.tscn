@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://befrs70s5xhnw"]
+
+[ext_resource type="Script" uid="uid://n5yovpot0xml" path="res://classes/segment.gd" id="1_3q00e"]
+
+[node name="segment" type="Polygon2D" unique_id=233421325]
+script = ExtResource("1_3q00e")

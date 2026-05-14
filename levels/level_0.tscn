@@ -1,54 +1,7 @@
 [gd_scene format=3 uid="uid://erlfvip1aqqa"]
 
-[ext_resource type="PackedScene" uid="uid://b0casf6cq012i" path="res://classes/tube.tscn" id="1_823pn"]
-[ext_resource type="Script" uid="uid://cwj2g1na6leql" path="res://classes/paint.gd" id="2_iss0w"]
+[ext_resource type="PackedScene" uid="uid://cxr207p2mumkp" path="res://scenes/paint_manager.tscn" id="1_eus5j"]
 
 [node name="level0" type="Node2D" unique_id=1468654253]
 
-[node name="tube" parent="." unique_id=706047191 node_paths=PackedStringArray("target") instance=ExtResource("1_823pn")]
-rotation = 0.0020952695
-color = Color(1, 1, 1, 1)
-target = NodePath("../Paint")
-
-[node name="tube2" parent="." unique_id=2006551030 node_paths=PackedStringArray("target") instance=ExtResource("1_823pn")]
-modulate = Color(1, 0, 0, 1)
-offset_top = 128.0
-offset_right = 128.0
-offset_bottom = 256.0
-rotation = 0.0020952695
-target = NodePath("../Paint")
-
-[node name="tube3" parent="." unique_id=492535635 node_paths=PackedStringArray("target") instance=ExtResource("1_823pn")]
-modulate = Color(1, 1, 0, 1)
-offset_top = 256.0
-offset_right = 128.0
-offset_bottom = 384.0
-rotation = 0.0020952695
-color = Color(1, 1, 0, 1)
-target = NodePath("../Paint")
-
-[node name="tube4" parent="." unique_id=1865602734 node_paths=PackedStringArray("target") instance=ExtResource("1_823pn")]
-modulate = Color(0, 0, 0.34117648, 1)
-offset_top = 384.0
-offset_right = 128.0
-offset_bottom = 512.0
-rotation = 0.0020952695
-color = Color(0.0004612009, 0.03474116, 0.2714129, 1)
-target = NodePath("../Paint")
-
-[node name="tube5" parent="." unique_id=1377673665 node_paths=PackedStringArray("target") instance=ExtResource("1_823pn")]
-modulate = Color(0.2509804, 0.09803922, 0, 1)
-offset_top = 512.0
-offset_right = 128.0
-offset_bottom = 640.0
-rotation = 0.0020952695
-color = Color(0.15529668, 0.050182134, 0, 1)
-target = NodePath("../Paint")
-
-[node name="Paint" type="ColorRect" parent="." unique_id=1641882184]
-offset_left = 480.0
-offset_top = 223.0
-offset_right = 672.0
-offset_bottom = 415.0
-script = ExtResource("2_iss0w")
-metadata/_custom_type_script = "uid://cwj2g1na6leql"
+[node name="paint_manager" parent="." unique_id=847882021 instance=ExtResource("1_eus5j")]
