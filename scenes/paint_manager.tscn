@@ -2,11 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://fvwwlx2uoifr" path="res://assets/tube_white.png" id="1_dp7je"]
 [ext_resource type="Texture2D" uid="uid://6o787voteb5h" path="res://assets/tube.png" id="1_jh2x6"]
+[ext_resource type="Script" uid="uid://cpwwxmway4m2f" path="res://scenes/paint_manager.gd" id="1_x6et0"]
 [ext_resource type="Script" uid="uid://ds7njicpmps5l" path="res://classes/tube.gd" id="2_dp7je"]
 [ext_resource type="Texture2D" uid="uid://bqparatr6a5rl" path="res://assets/tube_yellow.png" id="3_vpgtq"]
 [ext_resource type="Texture2D" uid="uid://cclmnfbvm263p" path="res://assets/tube_blue.png" id="5_1f48n"]
 [ext_resource type="Texture2D" uid="uid://dfwkyglkr4p3" path="res://assets/tube_umber.png" id="6_1axni"]
 [ext_resource type="Script" uid="uid://cwj2g1na6leql" path="res://classes/paint.gd" id="7_1f48n"]
+[ext_resource type="Script" uid="uid://bwak8oslo8h4n" path="res://classes/paint_target.gd" id="8_1axni"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vpgtq"]
 atlas = ExtResource("1_dp7je")
@@ -49,8 +51,11 @@ atlas = ExtResource("6_1axni")
 region = Rect2(768, 0, 768, 0)
 
 [node name="paint_manager" type="Node2D" unique_id=847882021]
+script = ExtResource("1_x6et0")
 
-[node name="TubeWhite" type="TextureButton" parent="." unique_id=831604165 node_paths=PackedStringArray("target")]
+[node name="tubes" type="Node2D" parent="." unique_id=1064045814]
+
+[node name="TubeWhite" type="TextureButton" parent="tubes" unique_id=831604165 node_paths=PackedStringArray("target")]
 offset_left = 138.0
 offset_top = 158.0
 offset_right = 232.0
@@ -62,10 +67,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_dp7je")
 color = Color(1, 1, 1, 1)
-target = NodePath("../Paint")
+target = NodePath("../../Paint")
 metadata/_custom_type_script = "uid://ds7njicpmps5l"
 
-[node name="TubeYellow" type="TextureButton" parent="." unique_id=522221534 node_paths=PackedStringArray("target")]
+[node name="TubeYellow" type="TextureButton" parent="tubes" unique_id=522221534 node_paths=PackedStringArray("target")]
 offset_left = 148.0
 offset_top = 241.00005
 offset_right = 242.0
@@ -77,10 +82,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_dp7je")
 color = Color(0.75686276, 0.6784314, 0.11372549, 1)
-target = NodePath("../Paint")
+target = NodePath("../../Paint")
 metadata/_custom_type_script = "uid://ds7njicpmps5l"
 
-[node name="TubeRed" type="TextureButton" parent="." unique_id=614991652 node_paths=PackedStringArray("target")]
+[node name="TubeRed" type="TextureButton" parent="tubes" unique_id=614991652 node_paths=PackedStringArray("target")]
 offset_left = 163.0
 offset_top = 317.00003
 offset_right = 257.0
@@ -92,10 +97,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_dp7je")
 color = Color(0.7372549, 0.101960786, 0.14901961, 1)
-target = NodePath("../Paint")
+target = NodePath("../../Paint")
 metadata/_custom_type_script = "uid://ds7njicpmps5l"
 
-[node name="TubeBlue" type="TextureButton" parent="." unique_id=228547876 node_paths=PackedStringArray("target")]
+[node name="TubeBlue" type="TextureButton" parent="tubes" unique_id=228547876 node_paths=PackedStringArray("target")]
 offset_left = 163.0
 offset_top = 406.00003
 offset_right = 257.0
@@ -107,10 +112,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_dp7je")
 color = Color(0.02745098, 0.101960786, 0.27450982, 1)
-target = NodePath("../Paint")
+target = NodePath("../../Paint")
 metadata/_custom_type_script = "uid://ds7njicpmps5l"
 
-[node name="TubeUmber" type="TextureButton" parent="." unique_id=1704495209 node_paths=PackedStringArray("target")]
+[node name="TubeUmber" type="TextureButton" parent="tubes" unique_id=1704495209 node_paths=PackedStringArray("target")]
 offset_left = 163.0
 offset_top = 494.00003
 offset_right = 257.0
@@ -122,10 +127,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_dp7je")
 color = Color(0.27450982, 0.14117648, 0.02745098, 1)
-target = NodePath("../Paint")
+target = NodePath("../../Paint")
 metadata/_custom_type_script = "uid://ds7njicpmps5l"
 
-[node name="Label" type="Label" parent="." unique_id=1230911968]
+[node name="LabelPaint" type="Label" parent="." unique_id=1230911968]
 offset_left = 224.0
 offset_top = 315.0
 offset_right = 325.0
@@ -140,3 +145,33 @@ offset_right = 325.0
 offset_bottom = 441.0
 script = ExtResource("7_1f48n")
 metadata/_custom_type_script = "uid://cwj2g1na6leql"
+
+[node name="LabelTarget" type="Label" parent="." unique_id=336562734]
+offset_left = 224.0
+offset_top = 17.0
+offset_right = 325.0
+offset_bottom = 40.0
+text = "TARGET:"
+horizontal_alignment = 1
+
+[node name="PaintTarget" type="ColorRect" parent="." unique_id=747424566]
+offset_left = 224.0
+offset_top = 45.0
+offset_right = 325.0
+offset_bottom = 146.0
+script = ExtResource("8_1axni")
+metadata/_custom_type_script = "uid://bwak8oslo8h4n"
+
+[node name="ButtonPaint" type="Button" parent="." unique_id=1100523605]
+offset_left = 224.0
+offset_top = 454.0
+offset_right = 325.0
+offset_bottom = 485.0
+text = "PAINT"
+
+[node name="ButtonClear" type="Button" parent="." unique_id=1562153013]
+offset_left = 224.0
+offset_top = 489.0
+offset_right = 325.0
+offset_bottom = 520.0
+text = "CLEAR"

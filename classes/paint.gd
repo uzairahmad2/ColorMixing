@@ -10,7 +10,7 @@ func _process(_delta:float) -> void:
 	visible = !empty
 
 
-func add(color2:Color, amount:float=0.07) -> void:
+func add(color2:Color, amount:float=0.1) -> void:
 	if empty:
 		color = color2
 		empty = false

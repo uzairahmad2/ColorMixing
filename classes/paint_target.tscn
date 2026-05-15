@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bdt5q2pinldox"]
+
+[ext_resource type="Script" uid="uid://bwak8oslo8h4n" path="res://classes/paint_target.gd" id="1_k53lq"]
+
+[node name="paint_target" type="ColorRect" unique_id=1670462231]
+script = ExtResource("1_k53lq")

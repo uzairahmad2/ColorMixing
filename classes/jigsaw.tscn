@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dmshd3xb0v11"]
+
+[ext_resource type="Script" uid="uid://bx133bur2t143" path="res://classes/jigsaw.gd" id="1_mmedv"]
+
+[node name="jigsaw" type="Polygon2D" unique_id=715768699]
+antialiased = true
+script = ExtResource("1_mmedv")
