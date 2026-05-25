@@ -16,6 +16,9 @@ func _ready() -> void:
 	if painting != null:
 		painting.jigsaw_ready.connect(jigsaw_ready)
 		painting.painting_finished.connect(painting_finished)
+	
+	paint_target.color = painting.get_current_jigsaw_color()
+	paint.clear()
 
 func submit_paint() -> void:
 	if painting == null:
@@ -26,7 +29,6 @@ func submit_paint() -> void:
 
 
 func jigsaw_ready(want_color:Color) -> void:
-	print("Jig")
 	paint_target.color = want_color
 	paint.clear()
 

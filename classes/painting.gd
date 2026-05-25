@@ -10,23 +10,19 @@ signal jigsaw_ready(Color)
 signal painting_finished()
 
 
-func _ready() -> void:
-	if current_jigsaw >= get_child_count():
-		return
-	if not get_child(current_jigsaw) == Jigsaw:
-		return
-	jigsaw_ready.emit(get_child(current_jigsaw).want_color)
+func get_current_jigsaw_color() -> Color:
+	if current_jigsaw >= get_child_count() or not get_child(current_jigsaw) is Jigsaw:
+		return Color.WHITE
+	return get_child(current_jigsaw).want_color
 
 func paint_jigsaw(color:Color) -> void:
-	if current_jigsaw >= get_child_count():
-		return
-	if not get_child(current_jigsaw) is Jigsaw:
+	if current_jigsaw >= get_child_count() or not get_child(current_jigsaw) is Jigsaw:
 		return
 	
 	get_child(current_jigsaw).paint(color)
 	current_jigsaw += 1
 	
-	if current_jigsaw >= get_child_count():
+	if current_jigsaw >= get_child_count() or not get_child(current_jigsaw) is Jigsaw:
 		painting_finished.emit()
-	elif get_child(current_jigsaw) is Jigsaw:
-		jigsaw_ready.emit(get_child(current_jigsaw).want_color)
+		return
+	jigsaw_ready.emit(get_child(current_jigsaw).want_color)
