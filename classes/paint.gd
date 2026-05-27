@@ -2,6 +2,7 @@ extends ColorRect
 class_name Paint
 
 var Mixbox = preload("res://addons/mixbox/mixbox.gd")
+var Pigmint = preload("res://addons/pigmint/pigmint.gd")
 
 var empty:bool = true
 

@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://cxr207p2mumkp" path="res://scenes/paint_manager.tscn" id="1_eus5j"]
 [ext_resource type="Texture2D" uid="uid://ch6scdhlrrf6y" path="res://paintings/1665_Girl_with_a_Pearl_Earring.jpg" id="1_yi3jx"]
 [ext_resource type="Script" uid="uid://s6e6gsqkq7j1" path="res://classes/painting.gd" id="2_823pn"]
-[ext_resource type="Script" uid="uid://bx133bur2t143" path="res://classes/jigsaw.gd" id="4_yi3jx"]
 
 [node name="level0" type="Node2D" unique_id=611746273]
 
@@ -20,9 +19,17 @@ position = Vector2(480, 98)
 script = ExtResource("2_823pn")
 metadata/_custom_type_script = "uid://s6e6gsqkq7j1"
 
-[node name="Jigsaw" type="Line2D" parent="paint_manager/Painting" unique_id=1137494870]
-points = PackedVector2Array(120, 94, 104, 126, 112, 150, 104, 198, 128, 302, 160, 318, 192, 286, 208, 230, 240, 190, 224, 182, 232, 134, 144, 78)
+[node name="Jigsaw" type="Line2D" parent="paint_manager/Painting" unique_id=1771394266]
+modulate = Color(1, 1, 1, 0.57254905)
+position = Vector2(400, 86)
+points = PackedVector2Array(-280, 8, -296, 40, -288, 64, -296, 104, -264, 216, -224, 232, -192, 224, -192, 176, -152, 112, -160, 96, -184, 88, -160, 48, -256, 0)
 closed = true
-default_color = Color(0.60546875, 0.60546875, 0.60546875, 1)
-script = ExtResource("4_yi3jx")
-metadata/_custom_type_script = "uid://bx133bur2t143"
+width = 5.0
+default_color = Color(0.83889705, 0.83889705, 0.838897, 1)
+
+[node name="Jigsaw2" type="Line2D" parent="paint_manager/Painting" unique_id=514585097]
+visible = false
+
+[node name="Jigsaw3" type="Line2D" parent="paint_manager/Painting" unique_id=1735689874]
+visible = false
+antialiased = true

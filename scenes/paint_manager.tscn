@@ -81,7 +81,7 @@ texture_pressed = SubResource("AtlasTexture_w34o6")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_dp7je")
-color = Color(0.75686276, 0.6784314, 0.11372549, 1)
+color = Color(1, 0.8941799, 0.14814812, 1)
 target = NodePath("../../Paint")
 metadata/_custom_type_script = "uid://ds7njicpmps5l"
 
@@ -111,7 +111,7 @@ texture_pressed = SubResource("AtlasTexture_go28h")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_dp7je")
-color = Color(0.02745098, 0.101960786, 0.27450982, 1)
+color = Color(0, 0.063905984, 0.28627452, 1)
 target = NodePath("../../Paint")
 metadata/_custom_type_script = "uid://ds7njicpmps5l"
 
@@ -126,7 +126,7 @@ texture_pressed = SubResource("AtlasTexture_w7nqy")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_dp7je")
-color = Color(0.27450982, 0.14117648, 0.02745098, 1)
+color = Color(0.14901961, 0.07450981, 0.019607844, 1)
 target = NodePath("../../Paint")
 metadata/_custom_type_script = "uid://ds7njicpmps5l"
 
