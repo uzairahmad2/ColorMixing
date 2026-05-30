@@ -27,7 +27,7 @@ func _process(_delta:float) -> void:
 	visible = !empty
 
 
-func add(color2:Color, amount:float=0.1) -> void:
+func add(color2:Color, amount:float=0.2) -> void:
 	var lottery:Array[int] = [0,1,2,3,4,5]
 	lottery.erase(frame)
 	frame = lottery.pick_random()

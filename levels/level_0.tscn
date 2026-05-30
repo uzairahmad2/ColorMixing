@@ -5,10 +5,12 @@
 [ext_resource type="Script" uid="uid://s6e6gsqkq7j1" path="res://classes/painting.gd" id="2_823pn"]
 [ext_resource type="Script" uid="uid://db6kt5qhqtim4" path="res://classes/dev_reference.gd" id="2_foxie"]
 [ext_resource type="Script" uid="uid://bx133bur2t143" path="res://classes/jigsaw.gd" id="4_yi3jx"]
+[ext_resource type="Texture2D" uid="uid://cqaxbspcuecsi" path="res://assets/paper.jpg" id="6_7d3si"]
 
 [node name="level0" type="Node2D" unique_id=611746273]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1928823195]
+visible = false
 position = Vector2(704, 344.00003)
 scale = Vector2(0.6666668, 0.6666668)
 texture = ExtResource("1_yi3jx")
@@ -26,6 +28,7 @@ metadata/_custom_type_script = "uid://s6e6gsqkq7j1"
 [node name="Jigsaw2" type="Node2D" parent="paint_manager/Painting" unique_id=41407159]
 script = ExtResource("4_yi3jx")
 want_color = Color(0.15294118, 0.12156863, 0.07058824, 1)
+texture = ExtResource("6_7d3si")
 metadata/_custom_type_script = "uid://bx133bur2t143"
 
 [node name="Line2D" type="Line2D" parent="paint_manager/Painting/Jigsaw2" unique_id=1107409932]
@@ -36,6 +39,7 @@ width = 6.0
 [node name="Jigsaw" type="Node2D" parent="paint_manager/Painting" unique_id=1591974139]
 script = ExtResource("4_yi3jx")
 want_color = Color(0.9529412, 0.8156863, 0.7372549, 1)
+texture = ExtResource("6_7d3si")
 metadata/_custom_type_script = "uid://bx133bur2t143"
 
 [node name="Line2D" type="Line2D" parent="paint_manager/Painting/Jigsaw" unique_id=293356492]
@@ -51,6 +55,7 @@ width = 6.0
 [node name="Jigsaw3" type="Node2D" parent="paint_manager/Painting" unique_id=1534849590]
 script = ExtResource("4_yi3jx")
 want_color = Color(0.5803922, 0.45882353, 0.34901962, 1)
+texture = ExtResource("6_7d3si")
 metadata/_custom_type_script = "uid://bx133bur2t143"
 
 [node name="Line2D" type="Line2D" parent="paint_manager/Painting/Jigsaw3" unique_id=1428366623]
