@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dufnvfd83lmud"]
+
+[ext_resource type="Script" uid="uid://db6kt5qhqtim4" path="res://classes/dev_reference.gd" id="1_vc1y2"]
+
+[node name="DevReference" type="Sprite2D" unique_id=1403954197]
+script = ExtResource("1_vc1y2")

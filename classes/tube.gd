@@ -3,7 +3,7 @@ class_name Tube
 
 
 @export var color:Color = Color.RED
-@export var target:Paint = null
+@export var target:PaintMix = null
 
 func _ready() -> void:
 	connect("pressed",_on_pressed)

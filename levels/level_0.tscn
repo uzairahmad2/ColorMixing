@@ -3,14 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://cxr207p2mumkp" path="res://scenes/paint_manager.tscn" id="1_eus5j"]
 [ext_resource type="Texture2D" uid="uid://ch6scdhlrrf6y" path="res://paintings/1665_Girl_with_a_Pearl_Earring.jpg" id="1_yi3jx"]
 [ext_resource type="Script" uid="uid://s6e6gsqkq7j1" path="res://classes/painting.gd" id="2_823pn"]
+[ext_resource type="Script" uid="uid://db6kt5qhqtim4" path="res://classes/dev_reference.gd" id="2_foxie"]
 [ext_resource type="Script" uid="uid://bx133bur2t143" path="res://classes/jigsaw.gd" id="4_yi3jx"]
 
 [node name="level0" type="Node2D" unique_id=611746273]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1378591273]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1928823195]
 position = Vector2(704, 344.00003)
 scale = Vector2(0.6666668, 0.6666668)
 texture = ExtResource("1_yi3jx")
+script = ExtResource("2_foxie")
+metadata/_custom_type_script = "uid://db6kt5qhqtim4"
 
 [node name="paint_manager" parent="." unique_id=1086742495 node_paths=PackedStringArray("painting") instance=ExtResource("1_eus5j")]
 painting = NodePath("Painting")
@@ -20,9 +23,42 @@ position = Vector2(480, 98)
 script = ExtResource("2_823pn")
 metadata/_custom_type_script = "uid://s6e6gsqkq7j1"
 
-[node name="Jigsaw" type="Line2D" parent="paint_manager/Painting" unique_id=1137494870]
-points = PackedVector2Array(120, 94, 104, 126, 112, 150, 104, 198, 128, 302, 160, 318, 192, 286, 208, 230, 240, 190, 224, 182, 232, 134, 144, 78)
-closed = true
-default_color = Color(0.60546875, 0.60546875, 0.60546875, 1)
+[node name="Jigsaw2" type="Node2D" parent="paint_manager/Painting" unique_id=41407159]
 script = ExtResource("4_yi3jx")
+want_color = Color(0.15294118, 0.12156863, 0.07058824, 1)
 metadata/_custom_type_script = "uid://bx133bur2t143"
+
+[node name="Line2D" type="Line2D" parent="paint_manager/Painting/Jigsaw2" unique_id=1107409932]
+points = PackedVector2Array(128, 550, 160, 486, 160, 454, 192, 398, 192, 374, 216, 342, 200, 318, 168, 318, 136, 302, 104, 190, 112, 150, 104, 126, 120, 94, 136, 38, 208, -2, 256, -26, 288, -42, 360, -26, 416, 30, 416, 70, 512, 422, 496, 446, 496, 550, 552, 542, 568, -154, -96, -122, -104, 558)
+closed = true
+width = 6.0
+
+[node name="Jigsaw" type="Node2D" parent="paint_manager/Painting" unique_id=1591974139]
+script = ExtResource("4_yi3jx")
+want_color = Color(0.9529412, 0.8156863, 0.7372549, 1)
+metadata/_custom_type_script = "uid://bx133bur2t143"
+
+[node name="Line2D" type="Line2D" parent="paint_manager/Painting/Jigsaw" unique_id=293356492]
+points = PackedVector2Array(120, 94, 104, 126, 112, 150, 104, 190, 136, 302, 168, 318, 208, 262, 240, 182, 224, 174, 232, 126, 144, 86)
+closed = true
+width = 6.0
+
+[node name="Line2D2" type="Line2D" parent="paint_manager/Painting/Jigsaw" unique_id=1893049388]
+points = PackedVector2Array(200, 318, 216, 342, 232, 334)
+closed = true
+width = 6.0
+
+[node name="Jigsaw3" type="Node2D" parent="paint_manager/Painting" unique_id=1534849590]
+script = ExtResource("4_yi3jx")
+want_color = Color(0.5803922, 0.45882353, 0.34901962, 1)
+metadata/_custom_type_script = "uid://bx133bur2t143"
+
+[node name="Line2D" type="Line2D" parent="paint_manager/Painting/Jigsaw3" unique_id=1428366623]
+points = PackedVector2Array(152, 150, 128, 222, 144, 230, 144, 254, 176, 262, 160.27957, 230.00002, 168, 230, 168, 158, 184, 142, 168, 142)
+closed = true
+width = 6.0
+
+[node name="Line2D2" type="Line2D" parent="paint_manager/Painting/Jigsaw3" unique_id=1676229589]
+points = PackedVector2Array(168, 318, 168, 294, 152, 286, 168, 286, 176, 278, 186.93509, 291.49084, 208, 262, 240, 182, 248, 198, 232, 246, 264, 286, 256, 302, 280, 310, 232, 334, 200, 318)
+closed = true
+width = 6.0

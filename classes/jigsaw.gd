@@ -1,4 +1,4 @@
-extends Line2D
+extends Node2D
 class_name Jigsaw
 
 
@@ -7,17 +7,19 @@ class_name Jigsaw
 var polygon:Polygon2D = null
 
 func _ready() -> void:
-	closed = true
-	default_color = Color(0.3,0.3,0.3)
-	width = 10.0
-	joint_mode = Line2D.LINE_JOINT_ROUND
-	polygon = Polygon2D.new()
-	polygon.polygon = points
-	polygon.antialiased = true
-	add_child(polygon)
-	print(polygon)
-	polygon.hide()
+	for line:Line2D in get_children():
+		line.closed=true
+		line.default_color = Color(0.5,0.5,0.5)
+		line.width = 10.0
+		line.joint_mode = Line2D.LINE_JOINT_ROUND
+		polygon = Polygon2D.new()
+		polygon.polygon = line.points
+		polygon.antialiased = true
+		line.add_child(polygon)
+		polygon.hide()
 
 func paint(brush_color:Color) -> void:
-	polygon.color = brush_color
-	polygon.show()
+	for line:Line2D in get_children():
+		line.width = 0
+		line.get_child(0).color = brush_color
+		line.get_child(0).show()

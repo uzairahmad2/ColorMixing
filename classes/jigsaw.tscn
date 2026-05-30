@@ -2,6 +2,5 @@
 
 [ext_resource type="Script" uid="uid://bx133bur2t143" path="res://classes/jigsaw.gd" id="1_mmedv"]
 
-[node name="jigsaw" type="Line2D" unique_id=527161089]
-antialiased = true
+[node name="jigsaw" type="Node2D" unique_id=275948891]
 script = ExtResource("1_mmedv")
