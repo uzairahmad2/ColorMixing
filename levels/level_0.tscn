@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://db6kt5qhqtim4" path="res://classes/dev_reference.gd" id="2_foxie"]
 [ext_resource type="Script" uid="uid://bx133bur2t143" path="res://classes/jigsaw.gd" id="4_yi3jx"]
 [ext_resource type="Texture2D" uid="uid://cqaxbspcuecsi" path="res://assets/paper.jpg" id="6_7d3si"]
+[ext_resource type="Texture2D" uid="uid://cp37caj2mste2" path="res://assets/frame.png" id="7_jum3j"]
 
 [node name="level0" type="Node2D" unique_id=611746273]
 
@@ -67,3 +68,24 @@ width = 6.0
 points = PackedVector2Array(168, 318, 168, 294, 152, 286, 168, 286, 176, 278, 186.93509, 291.49084, 208, 262, 240, 182, 248, 198, 232, 246, 264, 286, 256, 302, 280, 310, 232, 334, 200, 318)
 closed = true
 width = 6.0
+
+[node name="canvas" type="NinePatchRect" parent="." unique_id=719064895]
+offset_left = 345.0
+offset_top = 27.0
+offset_right = 1112.0
+offset_bottom = 622.0
+texture = ExtResource("7_jum3j")
+patch_margin_left = 140
+patch_margin_top = 140
+patch_margin_right = 140
+patch_margin_bottom = 140
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="canvas" unique_id=354955310]
+z_index = -1
+layout_mode = 0
+offset_right = 767.0
+offset_bottom = 595.0
+texture = ExtResource("6_7d3si")
+expand_mode = 1
